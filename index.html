@@ -10,34 +10,34 @@
     <link rel="stylesheet" href="index.css">
     <title>PlatziConf Hawaii</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="0">
 
     <!--Header-->
     <header>
-      <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
+      <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" role="navigation">
         <div class="container"> 
           <a class="navbar-brand" href="#">
             <img src="assets/img/platzi-logo.png" alt="Platzi logo"> Conf Hawaii
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>      
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">La Conferencia</a>
+                <a class="nav-link" href="#main">La Conferencia</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Los oradores</a>
+                <a class="nav-link" href="#speakers">Los oradores</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Lugar y Fecha</a>
+                <a class="nav-link" href="#place-time">Lugar y Fecha</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Conviertete en orador</a>
+                <a class="nav-link" href="#conviertete-en-orador">Conviertete en orador</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-platzi" href="#">Compra de Tickets</a>
+                <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#modalCompra">Compra de Tickets</a>
               </li>
             </ul>
           </div>
@@ -67,7 +67,7 @@
                         Platzi conf llega por primera vez a Hawaii! Un evento para compartir con nuestra comunidad el conocimiento.<br><strong>Te esperamos!</strong>
                       </p>
                       <a href="#" class="btn btn-outline-light">Quiero ser orador</a>
-                      <button type="button" class="btn btn-platzi">Comprar Tickets</button>
+                      <button type="button" class="btn btn-platzi"data-toggle="modal" data-target="#modalCompra">Comprar Tickets</button>
                     </div>
                 </div>
               </div>
@@ -138,7 +138,7 @@
     <!--/Speakers-->
 
     <!--Lugar y fecha-->
-    <section class="description">
+    <section class="description" id="place-time">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 col-md-6 pl-0 pr-0">
@@ -157,7 +157,7 @@
     <!--/Lugar y fecha-->
 
     <!--Formulario-->
-    <section id="Conviertete-en-orador" class="pb-2 pt-2">
+    <section id="conviertete-en-orador" class="pb-2 pt-2">
       <div class="container">
         <div class="row">
           <div class="col text-uppercase text-center">
@@ -228,6 +228,36 @@
         </div>
     </footer>
     <!--/Footer-->
+
+    <!--Modal-->
+    <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Compra de Tickets</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group mb-3">
+                  <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-platzi">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/Modal-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
