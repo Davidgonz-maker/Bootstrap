@@ -43,6 +43,15 @@
     object-fit: cover;
 }
 
+.description {
+    background-color:#343a40;
+    color: white;
+}
+
+.description img{
+    width: 100%;
+}
+
 .btn-platzi{
     background-color:  #97c93e;
     color: white;
